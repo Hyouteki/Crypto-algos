@@ -1,12 +1,12 @@
 # Crypto-algos
 Cryptography algorithms implementation from scratch for dummies. Written entirely in C++ in verbose style which is easy to understand and update further.
 
-### Useful header files
+## Useful header files
 - [big_number](https://github.com/Hyouteki/big_number)
 - [random _ bit prime number](https://github.com/Hyouteki/Crypto-algos/blob/main/prime_number.h)
 
-### Algorithms
+## Algorithms
 - [RSA](https://github.com/Hyouteki/Crypto-algos/blob/main/rsa.cpp)
 
-### References
+## References
 - https://github.com/Hyouteki/big_number.git
