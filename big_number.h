@@ -68,6 +68,9 @@ public:
 	friend big_number &multiply_modulus(big_number &, big_number &, big_number &);
 	friend big_number &power_modulus(big_number &, big_number &, big_number &);
 	friend big_number &get_random_number(int);
+	friend big_number &gcd(big_number &, big_number &);
+	friend big_number &min(big_number &, big_number &);
+	friend big_number &max(big_number &, big_number &);
 
 	// operator overloading for modulus
 	friend big_number &operator%=(big_number &, const big_number &);
@@ -497,14 +500,15 @@ big_number &multiply_modulus(big_number &num1, big_number &num2, big_number &mod
 	return *res;
 }
 
-big_number &power_modulus(big_number &base, big_number &exponent, big_number &mod)
+big_number &power_modulus(big_number &num1, big_number &exponent, big_number &mod)
 {
-	base %= mod;
+	big_number base;
+	base = num1 % mod;
 	if (exponent == 0)
 		return *(new big_number(1));
 	big_number tmp, *dump = new big_number();
 	big_number trash;
-	trash = exponent/2;
+	trash = exponent / 2;
 	tmp = power_modulus(base, trash, mod);
 	*dump = multiply_modulus(tmp, tmp, mod);
 	// odd exponent
@@ -539,6 +543,31 @@ big_number &get_random_number(int bit_size)
 	tmp = power(tmp, bit_size - 1);
 	*num += tmp; // to make the most significant bit high
 	return *num;
+}
+
+big_number &gcd(big_number &num1, big_number &num2)
+{
+	big_number tmp1, *tmp2 = new big_number();
+	tmp1 = num1;
+	*tmp2 = num2;
+	while (true) {
+        big_number tmp;
+		tmp = tmp1 % *tmp2;
+        if (tmp.is_null())
+            return *tmp2;
+        tmp1 = *tmp2;
+        *tmp2 = tmp;
+    }
+}
+
+big_number &min(big_number &num1, big_number &num2)
+{
+	return (num1 < num2)? num1: num2;
+}
+
+big_number &max(big_number &num1, big_number &num2)
+{
+	return (num1 > num2)? num1: num2;
 }
 
 big_number &operator%=(big_number &num1, const big_number &num2)
