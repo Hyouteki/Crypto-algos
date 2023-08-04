@@ -1,5 +1,5 @@
 # Crypto-algos
-Cryptography algorithms implementation from scratch for dummies
+Cryptography algorithms implementation from scratch for dummies. Written entirely in C++ in verbose style which is easy to understand and update further.
 
 ### Useful header files
 - [big_number](https://github.com/Hyouteki/big_number)
