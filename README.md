@@ -7,6 +7,9 @@ Cryptography algorithms implementation from scratch for dummies. Written entirel
 
 ## Algorithms
 - [RSA](https://github.com/Hyouteki/Crypto-algos/blob/main/rsa.cpp)
+- [Diffie Hellman key exchange](https://github.com/Hyouteki/Crypto-algos/blob/main/diffie_hellman.cpp)
 
 ## References
 - https://github.com/Hyouteki/big_number.git
+- https://youtu.be/4zahvcJ9glg
+- https://youtu.be/NmM9HA2MQGI
