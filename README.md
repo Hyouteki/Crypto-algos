@@ -1,5 +1,5 @@
 # Crypto-algos
-Cryptography algorithms implementation from scratch for dummies. Written entirely in C++ in verbose style which is easy to understand and update further.
+Cryptography algorithms implementation from scratch for dummies. Written entirely in C++ & Python in verbose style which is easy to understand and update further.
 
 ## Useful header files
 - [big_number](https://github.com/Hyouteki/big_number.h.git)
@@ -8,6 +8,7 @@ Cryptography algorithms implementation from scratch for dummies. Written entirel
 ## Algorithms
 - [RSA](https://github.com/Hyouteki/Crypto-algos/blob/main/rsa.cpp)
 - [Diffie Hellman key exchange](https://github.com/Hyouteki/Crypto-algos/blob/main/diffie_hellman.cpp)
+- [AES Rijndael](https://github.com/Hyouteki/Crypto-algos/blob/main/aes128.py)
 
 ## References
 - https://github.com/Hyouteki/big_number.h.git
